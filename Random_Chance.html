@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Random Chance</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function randomChance(numCoins){
+			var winningNum = prompt("Please pick a winning number between 0-99: ", 0);
+			var randomNum;
+			while(numCoins > 0){
+				console.log(randomNum = Math.trunc(Math.random()*100));  //compare random generated num to winningNum
+			if(randomNum == winningNum){
+				return console.log("You win: " + (Math.trunc((Math.random()*50)+50) + numCoins) + " coins");
+			}else {
+				console.log("sorry, keep playing");
+			}
+			numCoins--;
+			}if(numCoins==0){
+			console.log("Insert more coins to continue");
+			}
+
+		}
+
+		randomChance(10);
+	</script>
+
+</body>
+</html>
